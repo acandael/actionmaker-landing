@@ -1,0 +1,37 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Action Maker - Unieke teambuilding ervaringen" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--border: 220 13% 91%;
+		--input: 220 13% 91%;
+		--ring: 224 71.4% 4.1%;
+		--background: 0 0% 100%;
+		--foreground: 224 71.4% 4.1%;
+		--primary: 0 84.2% 60.2%;
+		--primary-foreground: 210 20% 98%;
+		--secondary: 220 14.3% 95.9%;
+		--secondary-foreground: 220.9 39.3% 11%;
+		--radius: 0.5rem;
+	}
+</style>

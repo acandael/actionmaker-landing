@@ -1,0 +1,35 @@
+---
+const features = [
+  {
+    icon: "/icon-flexible.svg",
+    title: "Flexibel",
+    description: "Een persoonlijke ervaring op het meest geschikte moment voor jouw team."
+  },
+  {
+    icon: "/icon-personal.svg",
+    title: "Persoonlijk",
+    description: "Je begeleiding op jullie bedrijven niveau afgestemd voor maximaal resultaat."
+  },
+  {
+    icon: "/icon-results.svg",
+    title: "Gegarandeerde resultaten",
+    description: "Je ziet onmiddellijk dat jouw teambuilding een positieve impact heeft."
+  }
+];
+---
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Waarom Kiezen Voor Action Maker</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {features.map(feature => (
+        <div class="text-center">
+          <div class="w-16 h-16 mx-auto mb-4">
+            <img src={feature.icon} alt={feature.title} class="w-full h-full" />
+          </div>
+          <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
